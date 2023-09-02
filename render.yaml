@@ -1,0 +1,14 @@
+services:
+  - name: my-container
+    image: render-examples/alpine-zip-rar:latest
+    env: []
+    startCommand: ["tail", "-f", "/dev/null"]
+    buildCommand: ["docker build -t render-examples/alpine-zip-rar:latest ."]
+    envVars: {}
+    ports: []
+    healthCheckPath: "/"
+    plan: free
+    privateEnvVars: []
+    instanceCount: 1
+    machineType: "cpu-1x"
+    diskType: "nfs"
